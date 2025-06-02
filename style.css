@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*
+{
+    font-family: "DM Sans", sans-serif !important;
+}
+.navbar .dropdown-toggle::after {
+    display: none;
+    margin-left: 15px;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+.banner
+{
+    background-image: url('./Assets/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 95vh;
+}
+.abt-ban
+{
+    background-image: url('./Assets/limited.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+}
+.abt-con
+{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.banner-title
+{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+}
+.nav-item .nav-link
+{
+    color: white;
+}
+.navbar-brand
+{
+    font-family: "DM Sans", sans-serif;
+}
+.ban-content
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+    margin-top: 200px;
+}
+.logo-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logo-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 60s linear infinite;
+}
+
+.logo-item {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.logo-item img {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-item {
+        margin: 0 20px;
+    }
+
+    .logo-item img {
+        height: 30px;
+    }
+}
+.btn-consult
+{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 20px;
+}
+
+.btn-get
+{
+    background: white;
+    color: rgb(16, 16, 181);
+    padding: 8px 20px;
+}
+.btn-get:hover, .btn-consult:hover{
+    background:rgb(16, 16, 181);;
+    color: white;
+    padding: 8px 20px;
+}
+.sect-spacer
+{
+    padding: 40px 0px;
+}
+.bg-lightblue
+{
+    background-color: #DBEAFE;
+}
+.text-dark
+{
+    color: #222 !important;
+}
+.card-desc, .list-inline-item
+{
+    font-weight: 400;
+    word-spacing: -1px;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.card-what
+{
+    margin-top: 40px;
+}
+.card-head
+{
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+}
+.dotted-border {
+    border-style: dashed !important;
+}
+.limited
+{
+    background-image: url('./Assets/limited.png');
+    background-size: cover;
+}
+.certified
+{
+    background-image: url('./Assets/lightway.png');
+    background-size: cover;
+}
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: rgba(207, 207, 207, 0.24) 4px 3px 8px 5px;
+}
+
+.testimonial-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial-profile img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.accordion-button:not(.collapsed)
+{
+    background-color: transparent;
+    border: none;
+}
+.accordion-button
+{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222 !important;
+}
+.blog-card {
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.blog-image-wrapper {
+    position: relative;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(44, 44, 201);
+    color: white;
+    padding: 10px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+.blog-content h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.blog-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: none;
+}
+.form-control, .form-select
+{
+    background-color: #f7f7f7;
+    border: none;
+}
+@media (max-width: 767px) {
+    .accordion-button
+    {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    .card-head
+    {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .sect-spacer
+    {
+        padding: 20px 0px;
+    }
+    .banner
+    {
+        background-image: url('./Assets/limited.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+    }
+    .abt-ban
+    {
+        width: 100%;
+        height: 135
+        vh;
+    }
+    .ban-content
+    {
+        margin-top: 50px;
+    }
+    .banner-title
+    {
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+    }
+    .see-card
+    {
+        margin-top: 10px !important;
+    }
+}
+.offcanvas
+{
+    background-color: blue  ;
+}
+/* about */
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.hero-cards {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-card {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.hero-card p {
+    font-size: 14px;
+    color: #666;
+}
+/* timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ebf0f7;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    top: 25px;
+    z-index: 1;
+    box-shadow: 2px 2px 10px 5px #d9dbdc;
+}
+
+.left {
+    left: 0;
+    text-align: right;
+}
+
+.left::after {
+    right: -10px;
+}
+
+.right {
+    left: 50%;
+    text-align: left;
+}
+
+.right::after {
+    left: -10px;
+}
+
+.content {
+    padding: 25px;
+    background-color: #e4effe;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.content h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.year-badge {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #4a90e2;
+    padding: 5px 15px;
+    border-radius: 20px;
+    position: relative;
+    top: -20px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::after {
+        left: 18px;
+    }
+
+    .left,
+    .right {
+        left: 0;
+        text-align: left;
+    }
+
+    .left::after,
+    .right::after {
+        left: 18px;
+    }
+
+    .left .year-badge,
+    .right .year-badge {
+        left: 0;
+        right: auto;
+        top: -20px;
+    }
+}
+.look-bg
+{
+    background-image: url('./Assets/looking.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+.team-card {
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-name {
+    font-weight: 600;
+    color: #222;
+}
+
+.member-title {
+    color: #333;
+    font-weight: 500;
+}
+
+.member-bio {
+    color: #34495e;
+    text-align: justify;
+}
+
+.carousel-inner {
+    padding: 20px 0;
+}
+.buzy-card, .other-card
+{
+    padding: 15px 20px;
+}
+.other-card
+{
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.other{
+    margin-left: -5px;
+    margin-bottom: 8px;
+}
+/* slider */
+
+.swiper-pagination {
+    margin-top: 60px;
+}
