@@ -22,7 +22,20 @@
         }
     </style>
 </head>
+<script>
+    window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('mainNavbar');
+            const scrollPosition = window.scrollY;
 
+            if (scrollPosition > 50) {  // threshold to activate fixed navbar
+                navbar.classList.add('fixed-top');
+                document.body.classList.add('scrolled-padding');
+            } else {
+                navbar.classList.remove('fixed-top');
+                document.body.classList.remove('scrolled-padding');
+            }
+        });
+</script>
 <body>
     <div class="banner">
         <div> 
@@ -177,8 +190,8 @@
             </div>
             <div class="mt-4">
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
-                    <a href="#" class="btn btn-get py-3 px-4 w-md-50 text-center">Get Started</a>
-                    <a href="#" class="btn btn-consult py-3 px-4 w-md-50 text-center">Free Consultation</a>
+                    <a href="#" class="btn btn-get py-2 px-4 w-md-50 text-center">Get Started</a>
+                    <a href="#" class="btn btn-consult py-2 px-4 w-md-50 text-center">Free Consultation</a>
                 </div>        
             </div>
        </div>
@@ -484,7 +497,7 @@
                         we provide comprehensive support
                         throughout your business journey.
                     </p>
-                    <a href="#" class="btn fw-bold btn-primary mt-2">
+                    <a href="#" class="btn fw-bold mt-2">
                         Explore Our Services <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -493,7 +506,7 @@
         </div>
     </div>
     <div class="sect-spacer certified">
-        <div class="container py-5">
+        <div class="container py-2">
             <div class="row justified-content-center align-items-center">
                 <div class="col-md-6">
                     <p class="card-head lh-sm">
@@ -637,10 +650,7 @@
                 <p>
                     Heres what our customers are saying about working with Buzypro.</p>
             </div>
-            
-            
-            <!-- Swiper Structure -->
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper1">
                 <div class="swiper-wrapper mt-3">
                     <div class="swiper-slide">
                         <div class="testimonial-card">
@@ -651,10 +661,14 @@
                                     <small class="">CEO, XYZ Ltd</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for
+                                startup services!. The process was smooth and professional. Highly recommend BuzyPros for startup
+                                services!. The process was smooth and professional. Highly recommend BuzyPros for startup services!
+                            </p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png" alt="google-logo" />
+                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
+                                        alt="google-logo" />
                                     <div class="text-warning">
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
@@ -663,10 +677,10 @@
                                         <i class="bi bi-star-fill"></i>
                                     </div>
                                 </div>
-                            </div>                                    
+                            </div>
                         </div>
                     </div>
-        
+            
                     <!-- Duplicate with other names/text/images as needed -->
                     <div class="swiper-slide">
                         <div class="testimonial-card">
@@ -677,10 +691,12 @@
                                     <small class="">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for
+                                startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png" alt="google-logo" />
+                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
+                                        alt="google-logo" />
                                     <div class="text-warning">
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
@@ -692,7 +708,7 @@
                             </div>
                         </div>
                     </div>
-        
+            
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-profile mb-2">
@@ -702,34 +718,12 @@
                                     <small class="">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for
+                                startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png" alt="google-logo" />
-                                    <div class="text-warning">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-profile mb-2">
-                                <img src="./Assets/test.png" alt="User">
-                                <div>
-                                    <h6 class="mb-0">John Doe</h6>
-                                    <small class="">Founder, ABC Inc</small>
-                                </div>
-                            </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="d-flex align-items-center gap-2">
-                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png" alt="google-logo" />
+                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
+                                        alt="google-logo" />
                                     <div class="text-warning">
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
@@ -750,10 +744,12 @@
                                     <small class="">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for
+                                startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png" alt="google-logo" />
+                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
+                                        alt="google-logo" />
                                     <div class="text-warning">
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-fill"></i>
@@ -765,8 +761,34 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Add more .swiper-slide as needed -->
-        
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-profile mb-2">
+                                <img src="./Assets/test.png" alt="User">
+                                <div>
+                                    <h6 class="mb-0">John Doe</h6>
+                                    <small class="">Founder, ABC Inc</small>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for
+                                startup services!</p>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
+                                        alt="google-logo" />
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            
                 </div>
                 <div class="mt-5 text-center">
                     <a href="" class="btn btn-primary px-4 py-2">
@@ -774,9 +796,60 @@
                     </a>
                 </div>
             </div>
-        
             <script>
-                const swiper = new Swiper(".mySwiper", {
+                document.addEventListener("DOMContentLoaded", function () {
+                    const testimonials = document.querySelectorAll(".testimonial-text");
+                    const wordLimit = 12;
+
+                    testimonials.forEach((para) => {
+                        const fullText = para.innerText.trim();
+                        const words = fullText.split(/\s+/);
+
+                        if (words.length > wordLimit) {
+                            const shortText = words.slice(0, wordLimit).join(" ") + "...";
+
+                            // Store full and short texts
+                            para.setAttribute("data-full", fullText);
+                            para.setAttribute("data-short", shortText);
+
+                            // Clear para and rebuild with inline span + button
+                            para.innerText = ""; // Clear current text
+
+                            const span = document.createElement("span");
+                            span.classList.add("text-content");
+                            span.innerText = shortText + " ";
+
+                            const btn = document.createElement("button");
+                            btn.innerText = "Show More";
+                            btn.style.border = "none";
+                            btn.style.background = "none";
+                            btn.style.color = "#007bff";
+                            btn.style.padding = "0";
+                            btn.style.cursor = "pointer";
+                            btn.style.fontSize = "14px";
+                            btn.style.display = "inline"; // Inline with text
+
+                            para.appendChild(span);
+                            para.appendChild(btn);
+
+                            let expanded = false;
+
+                            btn.addEventListener("click", () => {
+                                if (expanded) {
+                                    span.innerText = para.getAttribute("data-short") + " ";
+                                    btn.innerText = "Show More";
+                                } else {
+                                    span.innerText = para.getAttribute("data-full") + " ";
+                                    btn.innerText = "Show Less";
+                                }
+                                expanded = !expanded;
+                            });
+                        }
+                    });
+                });
+            </script>
+            <script>
+                const swiper = new Swiper(".mySwiper1", {
                     loop: true,
                     autoplay: {
                         delay: 2500,
@@ -815,7 +888,7 @@
                 </p>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                     
                         <div class="accordion-item">
@@ -941,8 +1014,23 @@
                     
                     </div>
                 </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const wordLimit = 12;
+
+                        document.querySelectorAll(".blog-content p").forEach((para) => {
+                            const fullText = para.innerText.trim();
+                            const words = fullText.split(/\s+/);
+
+                            if (words.length > wordLimit) {
+                                const shortText = words.slice(0, wordLimit).join(" ") + "...";
+                                para.innerText = shortText;
+                            }
+                        });
+                    });
+                </script>
             </div>
-            <div class="mt-5 text-center">
+            <div class="mt-3 text-center">
                 <a href="" class="btn btn-primary px-4 py-2">
                     View Other Articles
                 </a>
@@ -961,7 +1049,7 @@
                         compliance tailored to your business goals. No cost, no obligation.
                     </p>
             
-                    <div class="p-4 rounded-4">
+                    <div class="p-2 rounded-4">
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="Enter your name">
                         </div>
@@ -997,7 +1085,7 @@
                         Your information is secure and will never be shared with third parties.
                     </p>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <div class="bg-info bg-opacity-10 border border-info p-5 rounded-4">
                         <p class="fw-bold fs-4 mb-3">
                             Why Choose a Free Consultation?

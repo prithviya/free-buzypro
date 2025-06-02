@@ -84,7 +84,7 @@
         }
         
         .service-title {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 5px;
         }
@@ -138,11 +138,25 @@
     </style>
 
 </head>
+<script>
+    window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('mainNavbar');
+            const scrollPosition = window.scrollY;
 
+            if (scrollPosition > 50) {  // threshold to activate fixed navbar
+                navbar.classList.add('fixed-top');
+                document.body.classList.add('scrolled-padding');
+            } else {
+                navbar.classList.remove('fixed-top');
+                document.body.classList.remove('scrolled-padding');
+            }
+        });
+
+</script>
 <body>
     <div class="abt-ban">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light text-white">
+        <div class="">
+            <nav class="navbar navbar-expand-lg navbar-light text-white" id="mainNavbar">
                 <div class="container">
                     <!-- Left: Logo -->
                     <a class="navbar-brand fw-bold text-white fs-4 fw-bold" href="#">
@@ -350,10 +364,10 @@
         </div>
     </div>
     <div class="mission sect-spacer">
-        <div class="container">
+        <div class="container my-4">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4">
-                    <img src="./Assets/Rectangle 4.png" alt="" width="100%">
+                    <img src="./Assets/Rectangle 4.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-7">
                     <div class="mission-cont">
@@ -439,21 +453,21 @@
         </div>
     </div>
     <div class="sect-spacer bg-lightblue">
-        <div class="container">
+        <div class="container py-3">
             <div class="row justify-content-center align-items-center gy-4">
-                <div class="col-lg-3 col-md-4 col-12">
-                    <div class="p-4 rounded-5 bg-white h-100">
+                <div class="col-lg-3 col-md-4 col-12 text-left">
+                    <div class="px-3 py-4 rounded-4 bg-white h-100">
                         <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h3 class="fw-bold">Fast Processing</h3>
-                        <p>We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                        <h4 class="fw-bold mb-0">Fast Processing</h4>
+                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
         
-                <div class="col-lg-3 col-md-4 col-12">
-                    <div class="p-4 rounded-5 bg-white text-center h-100">
+                <div class="col-lg-3 col-md-4 col-12 text-left">
+                    <div class="px-3 py-4 rounded-4 bg-white h-100">
                         <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h3 class="fw-bold">Fast Processing</h3>
-                        <p>We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                        <h4 class="fw-bold mb-0">Fast Processing</h4>
+                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
         
@@ -468,19 +482,19 @@
                     <img src="./Assets/abt-2img.png" class="img-fluid w-100 rounded-5" alt="">
                 </div>
         
-                <div class="col-lg-3 col-md-4 col-12">
-                    <div class="p-4 rounded-5 bg-white text-center h-100">
+                <div class="col-lg-3 col-md-4 col-12 text-left">
+                    <div class="px-3 py-4 rounded-4 bg-white h-100">
                         <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h3 class="fw-bold">Fast Processing</h3>
-                        <p>We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                        <h4 class="fw-bold mb-0">Fast Processing</h4>
+                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
         
-                <div class="col-lg-3 col-md-4 col-12">
-                    <div class="p-4 rounded-5 bg-white text-center h-100">
+                <div class="col-lg-3 col-md-4 col-12 text-left">
+                    <div class="px-3 py-4 rounded-4 bg-white h-100">
                         <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h3 class="fw-bold">Fast Processing</h3>
-                        <p>We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                        <h4 class="fw-bold mb-0">Fast Processing</h4>
+                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
             </div>      
@@ -488,8 +502,8 @@
     </div>
     <div class="sect-spacer">
         <div class="container py-5">
-            <div>
-                <p class="card-head text-center">
+            <div class="mb-2">
+                <p class="card-head text-center mb-0">
                     The BuzyPro Story
                 </p>
                 <p class="text-center">
@@ -502,7 +516,7 @@
                             <div class="year-badge">2008</div>
                             <div class="content">
                                 <p class="fs-4 fw-bold mb-0">Where It All Began</p>
-                                <p>BuzzPro started as a small tax consulting firm founded by a team of experienced chartered accountants
+                                <p class="mb-0">BuzzPro started as a small tax consulting firm founded by a team of experienced chartered accountants
                                     and legal experts with a vision to simplify compliance for Indian businesses.</p>
                             </div>
                         </div>
@@ -510,7 +524,7 @@
                             <div class="year-badge">2012</div>
                             <div class="content">
                                 <p class="fs-4 fw-bold mb-0">Expanding Horizons</p>
-                                <p>With a growing client base, we expanded our services to include company registration, trademark
+                                <p class="mb-0">With a growing client base, we expanded our services to include company registration, trademark
                                     filing, and other legal compliance services to become a one-stop solution.</p>
                             </div>
                         </div>
@@ -518,7 +532,7 @@
                             <div class="year-badge">2016</div>
                             <div class="content">
                                 <p class="fs-4 fw-bold mb-0">Digital Transformation</p>
-                                <p>We embraced technology to streamline our processes, launching our digital platform to make business
+                                <p class="mb-0">We embraced technology to streamline our processes, launching our digital platform to make business
                                     compliance accessible to entrepreneurs across India, even in remote areas.</p>
                             </div>
                         </div>
@@ -526,7 +540,7 @@
                             <div class="year-badge">2018</div>
                             <div class="content">
                                 <p class="fs-4 fw-bold mb-0">GST Revolution</p>
-                                <p>When the GST reform was introduced, we helped over 500 businesses transition smoothly to the new tax
+                                <p class="mb-0">When the GST reform was introduced, we helped over 500 businesses transition smoothly to the new tax
                                     regime with our expertise and support.</p>
                             </div>
                         </div>          
@@ -538,7 +552,7 @@
     <div class="sect-spacer look-bg">
         <div class="container py-5">
             <div class="row justify-content-md-end">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <div class="rounded-4 bg-white px-5 py-4">
                         <p class="card-head mb-0">Looking Forward</p>
                         <p>
@@ -549,7 +563,7 @@
                         <div class="d-flex align-items-start gap-3 mb-4">
                             <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-4 mb-1">100% Compliance Guarantee</p>
+                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
                                 <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
@@ -557,7 +571,7 @@
                         <div class="d-flex align-items-start gap-3 mb-4">
                             <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-4 mb-1">100% Compliance Guarantee</p>
+                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
                                 <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
@@ -565,7 +579,7 @@
                         <div class="d-flex align-items-start gap-3 mb-4">
                             <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-4 mb-1">100% Compliance Guarantee</p>
+                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
                                 <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
@@ -646,7 +660,7 @@
                 </div>
             </div>
     
-            <div class="row justify-content-center align-items-center mt-5">
+            <div class="row justify-content-center align-items-center mt-5 mb-3">
                 <div class="col-md-8">
                     <div class="limited py-4 px-5 rounded-5">
                         <div class="row justify-content-between align-items-center">
@@ -659,8 +673,7 @@
                                     any service package. </p>
                             </div>
                             <div class="col-md-4">
-                                <a href="#" class="btn btn-get ">Claim Ofer Now <i
-                                        class="fa-solid fa-arrow-right ms-2"></i></a>
+                                <a href="#" class="btn btn-get ">Claim Ofer Now <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -674,11 +687,11 @@
                 <p class="card-head">
                     See How BuzyPro Works
                 </p>
-                <p>
+                <p class="mb-0">
                     We make business compliance simple, transparent, and hassle-free.
                 </p>
             </div>
-            <div class="row g-4">
+            <div class="row gap-4">
                 <div class="col-md-6 col-lg-6 col-12 mt-5">
                     <img src="./Assets/see-abt.png" alt="" class="img-fluid">
                 </div>
@@ -743,7 +756,7 @@
         </div>
     </div>
     <div class="sect-spacer certified">
-        <div class="container py-5">
+        <div class="container py-2">
             <div class="row justified-content-center align-items-center">
                 <div class="col-md-6">
                     <p class="card-head lh-sm">
@@ -824,7 +837,8 @@
                                     <small class="">CEO, XYZ Ltd</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!. The process was smooth and professional. Highly recommend BuzyPros for startup services!. The process was smooth and professional. Highly recommend BuzyPros for startup services!
+                            </p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -851,7 +865,7 @@
                                     <small class="">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -877,7 +891,7 @@
                                     <small class="">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -902,7 +916,7 @@
                                     <small class="">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -927,7 +941,7 @@
                                     <small class="">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p>The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -943,7 +957,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Add more .swiper-slide as needed -->
+
             
                 </div>
                 <div class="mt-5 text-center">
@@ -952,7 +966,58 @@
                     </a>
                 </div>
             </div>
-            
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const testimonials = document.querySelectorAll(".testimonial-text");
+                    const wordLimit = 12;
+
+                    testimonials.forEach((para) => {
+                        const fullText = para.innerText.trim();
+                        const words = fullText.split(/\s+/);
+
+                        if (words.length > wordLimit) {
+                            const shortText = words.slice(0, wordLimit).join(" ") + "...";
+
+                            // Store full and short texts
+                            para.setAttribute("data-full", fullText);
+                            para.setAttribute("data-short", shortText);
+
+                            // Clear para and rebuild with inline span + button
+                            para.innerText = ""; // Clear current text
+
+                            const span = document.createElement("span");
+                            span.classList.add("text-content");
+                            span.innerText = shortText + " ";
+
+                            const btn = document.createElement("button");
+                            btn.innerText = "Show More";
+                            btn.style.border = "none";
+                            btn.style.background = "none";
+                            btn.style.color = "#007bff";
+                            btn.style.padding = "0";
+                            btn.style.cursor = "pointer";
+                            btn.style.fontSize = "14px";
+                            btn.style.display = "inline"; // Inline with text
+
+                            para.appendChild(span);
+                            para.appendChild(btn);
+
+                            let expanded = false;
+
+                            btn.addEventListener("click", () => {
+                                if (expanded) {
+                                    span.innerText = para.getAttribute("data-short") + " ";
+                                    btn.innerText = "Show More";
+                                } else {
+                                    span.innerText = para.getAttribute("data-full") + " ";
+                                    btn.innerText = "Show Less";
+                                }
+                                expanded = !expanded;
+                            });
+                        }
+                    });
+                });
+            </script>
             <script>
                 const swiper = new Swiper(".mySwiper1", {
                     loop: true,
@@ -1006,7 +1071,8 @@
                                 <h5 class="member-name mt-3 mb-0">Rajesh Kumar</h5>
                                 <p class="member-title">Founder & CEO</p>
                                 <p class="member-bio mb-0">Chartered Accountant with 20+ years of experience in corporate
-                                    compliance and taxation.</p>
+                                    compliance and taxation.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1045,6 +1111,7 @@
                                 <h5 class="member-name mt-3 mb-0">Neha Kapoor</h5>
                                 <p class="member-title">CTO</p>
                                 <p class="member-bio mb-0">Technology lead with a deep understanding of scalable web
+                                    platforms and app development. Technology lead with a deep understanding of scalable web
                                     platforms and app development.</p>
                             </div>
                         </div>
@@ -1063,6 +1130,62 @@
                     </div>
 
                 </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const bios = document.querySelectorAll(".member-bio");
+                        const wordLimit = 12;
+
+                        bios.forEach((bio) => {
+                            const fullText = bio.innerText.trim();
+                            const words = fullText.split(/\s+/);
+
+                            if (words.length > wordLimit) {
+                                const shortText = words.slice(0, wordLimit).join(" ") + "...";
+
+                                // Store full and short text in attributes
+                                bio.setAttribute("data-full", fullText);
+                                bio.setAttribute("data-short", shortText);
+
+                                // Clear the original text
+                                bio.innerText = "";
+
+                                // Create span for text content
+                                const span = document.createElement("span");
+                                span.classList.add("bio-text");
+                                span.innerText = shortText + " ";
+
+                                // Create Show More button
+                                const btn = document.createElement("button");
+                                btn.innerText = "Show More";
+                                btn.style.border = "none";
+                                btn.style.background = "none";
+                                btn.style.color = "#007bff";
+                                btn.style.padding = "0";
+                                btn.style.cursor = "pointer";
+                                btn.style.fontSize = "14px";
+                                btn.style.display = "inline"; // Ensure inline display
+
+                                // Append span and button inline
+                                bio.appendChild(span);
+                                bio.appendChild(btn);
+
+                                let expanded = false;
+
+                                btn.addEventListener("click", () => {
+                                    if (expanded) {
+                                        span.innerText = bio.getAttribute("data-short") + " ";
+                                        btn.innerText = "Show More";
+                                    } else {
+                                        span.innerText = bio.getAttribute("data-full") + " ";
+                                        btn.innerText = "Show Less";
+                                    }
+                                    expanded = !expanded;
+                                });
+                            }
+                        });
+                    });
+                </script>
+                    
                 <script>
                     const swiper2 = new Swiper(".mySwiper2", {
                             loop: true,
@@ -1101,7 +1224,7 @@
                 </p>
             </div>
             <div class="row">
-                <div class="col-md-4 col-lg-4 col-12">
+                <div class="col-md-5 col-lg-5 col-12">
                     <div class="d-flex align-items-start gap-3 mb-4">
                         <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
                         <div>
@@ -1222,9 +1345,9 @@
                     <p class="text-white">
                         Get the latest updates, news and special offers
                     </p>
-                    <form class="d-flex flex-column flex-sm-row gap-2 bg-white rounded-2 p-2">
+                    <form class="d-flex flex-column flex-sm-row bg-white rounded-2 p-1">
                         <input type="email" class="form-control" placeholder="Enter your Email ID">
-                        <button class="btn btn-primary">Send</button>
+                        <button class="btn btn-primary x-100">Send</button>
                     </form>
                 </div>
     
@@ -1323,7 +1446,29 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        const fullText = document.getElementById('text').innerText;
+            const words = fullText.split(' ');
+            const limit = 15;
+            let isTruncated = true;
+
+            const truncatedText = words.slice(0, limit).join(' ') + '...';
+
+            document.getElementById('text').innerText = truncatedText;
+
+            function toggleText() {
+                const textElement = document.getElementById('text');
+                if (isTruncated) {
+                    textElement.innerText = fullText;
+                    event.target.innerText = 'Show Less';
+                } else {
+                    textElement.innerText = truncatedText;
+                    event.target.innerText = 'Show More';
+                }
+                isTruncated = !isTruncated;
+            }
+
+    </script>
 </body>
 <!-- Swiper JS -->
 
