@@ -15,8 +15,9 @@
 #mainNavbar {
     position: relative;
     width: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.9s ease-in-out;
     z-index: 1000;
+    transform: translateY(0);
 }
 
 #mainNavbar.fixed-top {
@@ -27,6 +28,15 @@
     background-color: rgba(58, 84, 177, 1);
     box-shadow: 0 2px 6px rgba(207, 206, 206, 0.2);
     padding: 0.5rem 1rem;
+    transform: translateY(0);
+    /* Ensure it's visible */
+    opacity: 1;
+}
+    
+#mainNavbar.hide-navbar {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
 }
 .scrolled-padding {
     padding-top: 70px;
@@ -38,7 +48,8 @@
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 115vh;
+    height: 100vh;
+    position: relative;
 }
 .abt-ban
 {
@@ -72,13 +83,21 @@
 }
 .ban-content
 {
-    align-items: center;
+    /* align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
     height: 90vh;
     top: 160px;
-    position: relative;
+    position: relative; */
+    position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
 }
 .logo-marquee {
     overflow: hidden;
