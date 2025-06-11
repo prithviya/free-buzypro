@@ -139,6 +139,29 @@
 
 </head>
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+            const boxes = document.querySelectorAll('.fade-up');
+
+            const handleScroll = () => {
+                boxes.forEach(box => {
+                    const boxTop = box.getBoundingClientRect().top;
+                    const boxBottom = box.getBoundingClientRect().bottom;
+                    const windowHeight = window.innerHeight;
+
+                    if (boxTop < windowHeight - 50 && boxBottom > 50) {
+                        box.classList.add('visible');
+                        box.classList.remove('hidden');
+                    } else {
+                        box.classList.remove('visible');
+                        box.classList.add('hidden');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleScroll);
+
+            handleScroll();
+        });
     window.addEventListener('scroll', () => {
             const navbar = document.getElementById('mainNavbar');
             const scrollPosition = window.scrollY;
@@ -304,13 +327,13 @@
             <div class="container abt-con">
                 <div class="row justify-content-evenly align-items-center">
                         <div class="col-lg-5 mb-5 mb-lg-0 text-white col-12">
-                            <h1 class="card-head">Start & Grow Your Business the Smart Way</h1>
-                            <p class="hero-subtitle mb-0">Company Registration, GST Filing, Tax Compliance – All in One Place</p>
+                            <h1 class="card-head fade-up">Start & Grow Your Business the Smart Way</h1>
+                            <p class="hero-subtitle mb-0 fade-up">Company Registration, GST Filing, Tax Compliance – All in One Place</p>
                         </div>
                         <div class="col-lg-7 col-md-7 col-12">
                             <div class="cards-container">
                                 <div class="service-card" onclick="navigateToService('legal-compliance')">
-                                    <div class="service-card-inner">
+                                    <div class="service-card-inner fade-up">
                                         <div class="service-icon">
                                             <i class="bi bi-paperclip"></i>
                                         </div>
@@ -320,7 +343,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="arrow-icon">
+                                    <div class="arrow-icon fade-up">
                                         <i class="bi bi-arrow-right"></i>
                                     </div>
                                 </div>
@@ -328,32 +351,32 @@
                     
                                 <div class="service-card" onclick="navigateToService('gst-registration')">
                                     <div class="service-card-inner">
-                                        <div class="service-icon">
+                                        <div class="service-icon fade-up">
                                             <i class="bi bi-paperclip"></i>
                                         </div>
                                         <div class="service-content">
-                                            <h3 class="service-title">GST Registration & Filing</h3>
-                                            <p class="service-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                            <h3 class="service-title fade-up">GST Registration & Filing</h3>
+                                            <p class="service-description fade-up">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="arrow-icon">
+                                    <div class="arrow-icon fade-up">
                                         <i class="bi bi-arrow-right"></i>
                                     </div>
                                 </div>
                                 
                                 <div class="service-card" onclick="navigateToService('company-registration')">
                                     <div class="service-card-inner">
-                                        <div class="service-icon">
+                                        <div class="service-icon fade-up">
                                             <i class="bi bi-paperclip"></i>
                                         </div>
                                         <div class="service-content">
-                                            <h3 class="service-title">Company Registration</h3>
-                                            <p class="service-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                            <h3 class="service-title fade-up">Company Registration</h3>
+                                            <p class="service-description fade-up">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="arrow-icon">
+                                    <div class="arrow-icon fade-up">
                                         <i class="bi bi-arrow-right"></i>
                                     </div>
                                 </div>
@@ -368,32 +391,32 @@
         <div class="container my-4">
             <div class="row justify-content-center align-items-center gap-4">
                 <div class="col-md-4 col-lg-4 col-12">
-                    <img src="./Assets/Rectangle 4.png" alt="" class="cus-img">
+                    <img src="./Assets/Rectangle 4.png" alt="" class="cus-img fade-up">
                 </div>
                 <div class="col-md-7 col-lg-7 col-12">
                     <div class="mission-cont">
-                        <p class="card-head">
+                        <p class="card-head fade-up">
                             Our Mission
                         </p>
-                        <p class="fs-6 fs-4">
+                        <p class="fs-6 fs-4 fade-up">
                             At BuzyPro, we're on a mission to simplify business compliance for
                             entrepreneurs across India. We believe that administrative
                             challenges shouldn't stand in the way of your business growth.
                         </p>
-                        <p class="fs-6 fs-4 mb-4">
+                        <p class="fs-6 fs-4 mb-4 fade-up">
                             With 15+ years of expertise and 1000+ satisfied businesses, we
                             provide hassle-free company registration, tax filing, and
                             compliance solutions that save you time and money.
                         </p>
                         
                         <div class="d-flex flex-wrap gap-3">
-                            <span class="d-flex align-items-center bg-light text-dark px-3 py-2 rounded-5">
+                            <span class="fade-up d-flex align-items-center bg-light text-dark px-3 py-2 rounded-5">
                                 <i class="bi bi-check2-circle text-success me-2"></i> Transparency 
                             </span>
-                            <span class="d-flex align-items-center bg-light text-dark px-3 py-2 rounded-5">
+                            <span class="fade-up d-flex align-items-center bg-light text-dark px-3 py-2 rounded-5">
                                 <i class="bi bi-check2-circle text-success me-2"></i> Reliability 
                             </span>
-                            <span class="d-flex align-items-center bg-light text-dark px-3 py-2 rounded-5">
+                            <span class="fade-up d-flex align-items-center bg-light text-dark px-3 py-2 rounded-5">
                                 <i class="bi bi-check2-circle text-success me-2"></i> Expertise 
                             </span>              
                         </div>
@@ -458,45 +481,45 @@
         <div class="container py-3">
             <div class="row justify-content-center align-items-center gy-4 gap-1">
                 <div class="col-lg-3 col-md-3 col-12 text-left">
-                    <div class="px-3 py-4 rounded-4 bg-white h-100">
-                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h4 class="fw-bold mb-0">Fast Processing</h4>
-                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                    <div class="px-3 py-4 rounded-4 bg-white h-100 fade-up">
+                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3 fade-up">
+                        <h4 class="fw-bold mb-0 fade-up">Fast Processing</h4>
+                        <p class="mb-0 fade-up">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
         
-                <div class="col-lg-3 col-md-3 col-12 text-left">
+                <div class="col-lg-3 col-md-3 col-12 text-left fade-up">
                     <div class="px-3 py-4 rounded-4 bg-white h-100">
-                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h4 class="fw-bold mb-0">Fast Processing</h4>
-                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3 fade-up">
+                        <h4 class="fw-bold mb-0 fade-up">Fast Processing</h4>
+                        <p class="mb-0 fade-up">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
         
                 <div class="col-lg-5 col-md-5 col-12">
-                    <img src="./Assets/abt-2img.png" class="img-fluid" alt="">
+                    <img src="./Assets/abt-2img.png" class="img-fluid fade-up" alt="">
                 </div>
             </div>
         
             <!-- Second Row -->
             <div class="row justify-content-center align-items-center gy-3 mt-1 gap-1">
                 <div class="col-lg-5 col-md-5 col-12">
-                    <img src="./Assets/abt-2img.png" class="img-fluid" alt="">
+                    <img src="./Assets/abt-2img.png" class="img-fluid fade-up" alt="">
                 </div>
         
                 <div class="col-lg-3 col-md-3 col-12 text-left">
-                    <div class="px-3 py-4 rounded-4 bg-white h-100">
-                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h4 class="fw-bold mb-0">Fast Processing</h4>
-                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                    <div class="px-3 py-4 rounded-4 bg-white h-100 fade-up">
+                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3 fade-up">
+                        <h4 class="fw-bold mb-0 fade-up">Fast Processing</h4>
+                        <p class="mb-0 fade-up">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
         
                 <div class="col-lg-3 col-md-3 col-12 text-left">
-                    <div class="px-3 py-4 rounded-4 bg-white h-100">
-                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3">
-                        <h4 class="fw-bold mb-0">Fast Processing</h4>
-                        <p class="mb-0">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
+                    <div class="px-3 py-4 rounded-4 bg-white h-100 fade-up">
+                        <img src="./Assets/proimg.png" alt="" class="img-fluid mb-3 fade-up">
+                        <h4 class="fw-bold mb-0 fade-up">Fast Processing</h4>
+                        <p class="mb-0 fade-up">We complete most registrations and filings in just 3–7 business days, saving you valuable time.</p>
                     </div>
                 </div>
             </div>      
@@ -505,44 +528,44 @@
     <div class="sect-spacer">
         <div class="container py-5">
             <div class="mb-2">
-                <p class="card-head text-center mb-0">
+                <p class="card-head text-center mb-0 fade-up">
                     The BuzyPro Story
                 </p>
-                <p class="text-center">
+                <p class="text-center fade-up">
                     Our journey from a small consulting firm to Indias trusted business compliance partner</p>
             </div>
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-12">
                     <div class="timeline">
                         <div class="timeline-item right">
-                            <div class="year-badge">2008</div>
+                            <div class="year-badge fade-up">2008</div>
                             <div class="content">
-                                <p class="fs-4 fw-bold mb-0">Where It All Began</p>
-                                <p class="mb-0">BuzzPro started as a small tax consulting firm founded by a team of experienced chartered accountants
+                                <p class="fs-4 fw-bold mb-0 fade-up">Where It All Began</p>
+                                <p class="mb-0 fade-up">BuzzPro started as a small tax consulting firm founded by a team of experienced chartered accountants
                                     and legal experts with a vision to simplify compliance for Indian businesses.</p>
                             </div>
                         </div>
                         <div class="timeline-item left">
-                            <div class="year-badge">2012</div>
+                            <div class="year-badge fade-up">2012</div>
                             <div class="content">
-                                <p class="fs-4 fw-bold mb-0">Expanding Horizons</p>
-                                <p class="mb-0">With a growing client base, we expanded our services to include company registration, trademark
+                                <p class="fs-4 fw-bold mb-0 fade-up">Expanding Horizons</p>
+                                <p class="mb-0 fade-up">With a growing client base, we expanded our services to include company registration, trademark
                                     filing, and other legal compliance services to become a one-stop solution.</p>
                             </div>
                         </div>
                         <div class="timeline-item right">
-                            <div class="year-badge">2016</div>
+                            <div class="year-badge fade-up">2016</div>
                             <div class="content">
-                                <p class="fs-4 fw-bold mb-0">Digital Transformation</p>
-                                <p class="mb-0">We embraced technology to streamline our processes, launching our digital platform to make business
+                                <p class="fs-4 fw-bold mb-0 fade-up">Digital Transformation</p>
+                                <p class="mb-0 fade-up">We embraced technology to streamline our processes, launching our digital platform to make business
                                     compliance accessible to entrepreneurs across India, even in remote areas.</p>
                             </div>
                         </div>
                         <div class="timeline-item left">
-                            <div class="year-badge">2018</div>
+                            <div class="year-badge fade-up">2018</div>
                             <div class="content">
-                                <p class="fs-4 fw-bold mb-0">GST Revolution</p>
-                                <p class="mb-0">When the GST reform was introduced, we helped over 500 businesses transition smoothly to the new tax
+                                <p class="fs-4 fw-bold mb-0 fade-up">GST Revolution</p>
+                                <p class="mb-0 fade-up">When the GST reform was introduced, we helped over 500 businesses transition smoothly to the new tax
                                     regime with our expertise and support.</p>
                             </div>
                         </div>          
@@ -555,34 +578,34 @@
         <div class="container py-5">
             <div class="row justify-content-md-end">
                 <div class="col-md-6">
-                    <div class="rounded-4 bg-white px-5 py-4">
-                        <p class="card-head mb-0">Looking Forward</p>
-                        <p>
+                    <div class="rounded-4 bg-white px-5 py-4 fade-up">
+                        <p class="card-head mb-0 fade-up">Looking Forward</p>
+                        <p class="fade-up">
                             Our journey is just beginning. Were committed to continuously
                             innovating and expanding our services to meet the evolving
                             needs of Indian businesses.
                         </p>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="fade-up img-fluid rounded" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="fade-up img-fluid rounded" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="fade-up img-fluid rounded" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
@@ -594,28 +617,28 @@
     <div class="sect-spacer bg-light">
         <div class="container">
             <div>
-                <p class="card-head mt-5 text-center mb-0">
+                <p class="card-head mt-5 text-center mb-0 fade-up">
                     Why Choose BuzyPro ?
                 </p>
-                <p class="text-center mt-1">
+                <p class="text-center mt-1 fade-up">
                     We make business compliance simple, transparent, and hassle-free.</p>
             </div>
             <div class="row mt-4">
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="why-choose">
-                        <div class="bg-white rounded-5 px-4 py-5 h-100">
-                            <img src="./Assets/pro-img.png" alt="" class="img-fluid">
-                            <p class="fs-4 fw-bold mt-2 mb-0">Fast Process</p>
-                            <p class="lh-sm">
+                        <div class="bg-white rounded-5 px-4 py-5 h-100 fade-up">
+                            <img src="./Assets/pro-img.png" alt="" class="img-fluid fade-up">
+                            <p class="fs-4 fw-bold mt-2 mb-0 fade-up">Fast Process</p>
+                            <p class="lh-sm fade-up">
                                 We process your applications up to <b>3x faster</b> than traditional service providers.
                             </p>
-                            <div class="border border-primary p-2 rounded dotted-border bg-lightblue fw-bold">
+                            <div class="border border-primary fade-up p-2 rounded dotted-border bg-lightblue fw-bold">
                                 Most filings completed within 7 days
                             </div>
                             <ul class="list-unstyled mt-3">
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Quick document verification</li>
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Expedited government filings</li>
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Real time progress tracking</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Quick document verification</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Expedited government filings</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Real time progress tracking</li>
                             </ul>
                         </div>
                     </div>
@@ -623,19 +646,19 @@
     
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="why-choose">
-                        <div class="bg-white rounded-5 px-4 py-5 h-100">
-                            <img src="./Assets/pro-img.png" alt="" class="img-fluid">
-                            <p class="fs-4 fw-bold mt-2 mb-0">Transparent Pricing</p>
-                            <p class="lh-sm">
+                        <div class="bg-white rounded-5 px-4 py-5 h-100 fade-up">
+                            <img src="./Assets/pro-img.png" alt="" class="img-fluid fade-up">
+                            <p class="fs-4 fw-bold mt-2 mb-0 fade-up">Transparent Pricing</p>
+                            <p class="lh-sm fade-up">
                                 We process your applications up to <b>3x faster</b> than traditional service providers.
                             </p>
-                            <div class="border border-primary p-2 rounded dotted-border bg-lightblue fw-bold">
+                            <div class="border fade-up border-primary p-2 rounded dotted-border bg-lightblue fw-bold">
                                 Most filings completed within 7 days
                             </div>
                             <ul class="list-unstyled mt-3">
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Quick document verification</li>
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Expedited government filings</li>
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Real time progress tracking</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Quick document verification</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Expedited government filings</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Real time progress tracking</li>
                             </ul>
                         </div>
                     </div>
@@ -643,19 +666,19 @@
     
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="why-choose">
-                        <div class="bg-white rounded-5 px-4 py-5 h-100">
-                            <img src="./Assets/pro-img.png" alt="" class="img-fluid">
-                            <p class="fs-4 fw-bold mt-2 mb-0">Fast Process</p>
-                            <p class="lh-sm">
+                        <div class="bg-white rounded-5 px-4 py-5 h-100 fade-up">
+                            <img src="./Assets/pro-img.png" alt="" class="img-fluid fade-up">
+                            <p class="fs-4 fw-bold mt-2 mb-0 fade-up">Fast Process</p>
+                            <p class="lh-sm fade-up">
                                 We process your applications up to <b>3x faster</b> than traditional service providers.
                             </p>
-                            <div class="border border-primary p-2 rounded dotted-border bg-lightblue fw-bold">
+                            <div class="border fade-up border-primary p-2 rounded dotted-border bg-lightblue fw-bold">
                                 Most filings completed within 7 days
                             </div>
                             <ul class="list-unstyled mt-3">
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Quick document verification</li>
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Expedited government filings</li>
-                                <li><i class="text-primary bi bi-check2 me-2"></i> Real time progress tracking</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Quick document verification</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Expedited government filings</li>
+                                <li class="fade-up"><i class="text-primary bi bi-check2 me-2"></i> Real time progress tracking</li>
                             </ul>
                         </div>
                     </div>
@@ -664,18 +687,18 @@
     
             <div class="row justify-content-center align-items-center mt-5 mb-3">
                 <div class="col-md-8">
-                    <div class="limited py-4 px-5 rounded-5">
+                    <div class="limited py-4 px-5 rounded-5 fade-up">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-md-8">
-                                <p class="text-white fs-3 fw-bold">
+                                <p class="text-white fs-3 fw-bold fade-up">
                                     Limited Time Offer: 20% Off!
                                 </p>
-                                <p class="text-white lh-sm fs-5">
+                                <p class="text-white lh-sm fs-5 fade-up">
                                     Book your consultation now and get 20% off on
                                     any service package. </p>
                             </div>
                             <div class="col-md-4">
-                                <a href="#" class="btn btn-get ">Claim Ofer Now <i class="bi bi-arrow-right"></i></a>
+                                <a href="#" class="btn btn-get fade-up">Claim Ofer Now <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -686,63 +709,63 @@
     <div class="sect-spacer">
         <div class="container py-5">
             <div class="text-center">
-                <p class="card-head">
+                <p class="card-head fade-up">
                     See How BuzyPro Works
                 </p>
-                <p class="mb-0">
+                <p class="mb-0 fade-up">
                     We make business compliance simple, transparent, and hassle-free.
                 </p>
             </div>
             <div class="row gap-4">
                 <div class="col-md-6 col-lg-6 col-12 mt-5">
-                    <img src="./Assets/see-abt.png" alt="" class="cus-img">
+                    <img src="./Assets/see-abt.png" alt="" class="cus-img w-100 h-100 fade-up">
                 </div>
                 <div class="col-md-5 col-lg-5 col-12 mt-lg-5">
-                    <p class="fs-3 fw-bold mb-0">
+                    <p class="fs-3 fw-bold mb-0 fade-up">
                         Your Business Compliance Journey, Simplified
                     </p>
-                    <p>
+                    <p class="fade-up">
                         Discover how Buzypro helps you register and stay compliant with ease
                         guided by experts every step of the way.
                     </p>
                     <div>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3 mb-4">
-                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                            <img src="./Assets/proimg.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                             <div>
-                                <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                                <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                                <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                                <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                     free.</p>
                             </div>
                         </div>
@@ -751,7 +774,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="" class="btn btn-primary px-4 py-2 mt-3">
+                <a href="" class="btn btn-primary px-4 py-2 mt-3 fade-up">
                     Get Free Consultation
                 </a> 
             </div>   
@@ -761,22 +784,22 @@
         <div class="container py-2">
             <div class="row justified-content-center align-items-center">
                 <div class="col-md-6">
-                    <p class="card-head lh-sm">
+                    <p class="card-head lh-sm fade-up">
                         Our Certifications &<br />
                         Partnerships
                     </p>
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-6 text-center mb-3">
-                            <img src="./Assets/cert/iso.png" class="img-fluid" alt="ISO" />
+                            <img src="./Assets/cert/iso.png" class="img-fluid fade-up" alt="ISO" />
                         </div>
                         <div class="col-lg-3 col-md-3 col-6 text-center mb-3">
-                            <img src="./Assets/cert/mca.png" class="img-fluid" alt="MCA" />
+                            <img src="./Assets/cert/mca.png" class="img-fluid fade-up" alt="MCA" />
                         </div>
                         <div class="col-lg-3 col-md-3 col-6 text-center mb-3">
-                            <img src="./Assets/cert/mese.png" class="img-fluid" alt="MESE" />
+                            <img src="./Assets/cert/mese.png" class="img-fluid fade-up" alt="MESE" />
                         </div>
                         <div class="col-lg-3 col-md-3 col-6 text-center mb-3">
-                            <img src="./Assets/cert/gst.png" class="img-fluid" alt="GST" />
+                            <img src="./Assets/cert/gst.png" class="img-fluid fade-up" alt="GST" />
                         </div>
                     </div>
                       
@@ -784,34 +807,34 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-6 text-center border-end border-bottom p-3">
-                            <p class="fw-bold fs-1 mb-0">
+                            <p class="fw-bold fs-1 mb-0 fade-up">
                                 1000+
                             </p>
-                            <p class="fw-bold fs-5">
+                            <p class="fw-bold fs-5 fade-up">
                                 Businesses Registered
                             </p>
                         </div>
                         <div class="col-lg-6 col-md-6 col-6 text-center border-bottom p-3">
-                            <p class="fw-bold fs-1 mb-0">
+                            <p class="fw-bold fs-1 mb-0 fade-up">
                                 1000+
                             </p>
-                            <p class="fw-bold fs-5">
+                            <p class="fw-bold fs-5 fade-up">
                                 Businesses Registered
                             </p>
                         </div>
                         <div class="col-lg-6 col-md-6 col-6 text-center border-end p-3">
-                            <p class="fw-bold fs-1 mb-0">
+                            <p class="fw-bold fs-1 mb-0 fade-up">
                                 1000+
                             </p>
-                            <p class="fw-bold fs-5">
+                            <p class="fw-bold fs-5 fade-up">
                                 Businesses Registered
                             </p>
                         </div>
                         <div class="col-lg-6 col-md-6 col-6 text-center p-3">
-                            <p class="fw-bold fs-1 mb-0">
+                            <p class="fw-bold fs-1 mb-0 fade-up">
                                 1000+
                             </p>
-                            <p class="fw-bold fs-5">
+                            <p class="fw-bold fs-5 fade-up">
                                 Businesses Registered
                             </p>
                         </div>
@@ -823,10 +846,10 @@
     <div class="sect-spacer">
         <div class="container-fluids py-5">
             <div class="text-center">
-                <p class="card-head text-center mb-0">
+                <p class="card-head text-center mb-0 fade-up">
                     What Our Clients Say
                 </p>
-                <p>
+                <p class="fade-up">
                     Heres what our customers are saying about working with Buzypro.</p>
             </div>
             <div class="swiper mySwiper1">
@@ -834,13 +857,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-profile mb-2">
-                                <img src="./Assets/test.png" alt="User">
+                                <img src="./Assets/test.png" alt="User" class="fade-up">
                                 <div>
-                                    <h6 class="mb-0">Jane Smith</h6>
-                                    <small class="">CEO, XYZ Ltd</small>
+                                    <h6 class="mb-0 fade-up">Jane Smith</h6>
+                                    <small class="fade-up">CEO, XYZ Ltd</small>
                                 </div>
                             </div>
-                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!. The process was smooth and professional. Highly recommend BuzyPros for startup services!. The process was smooth and professional. Highly recommend BuzyPros for startup services!
+                            <p class="testimonial-text fade-up">The process was smooth and professional. Highly recommend BuzyPros for startup services!. The process was smooth and professional. Highly recommend BuzyPros for startup services!. The process was smooth and professional. Highly recommend BuzyPros for startup services!
                             </p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
@@ -862,13 +885,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-profile mb-2">
-                                <img src="./Assets/test.png" alt="User">
+                                <img src="./Assets/test.png" alt="User" class="fade-up">
                                 <div>
-                                    <h6 class="mb-0">John Doe</h6>
-                                    <small class="">Founder, ABC Inc</small>
+                                    <h6 class="mb-0 fade-up">John Doe</h6>
+                                    <small class="fade-up">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text fade-up">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -888,13 +911,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-profile mb-2">
-                                <img src="./Assets/test.png" alt="User">
+                                <img src="./Assets/test.png" alt="User" class="fade-up">
                                 <div>
-                                    <h6 class="mb-0">John Doe</h6>
-                                    <small class="">Founder, ABC Inc</small>
+                                    <h6 class="mb-0 fade-up">John Doe</h6>
+                                    <small class="fade-up">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text fade-up">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -913,13 +936,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-profile mb-2">
-                                <img src="./Assets/test.png" alt="User">
+                                <img src="./Assets/test.png" alt="User" class="fade-up">
                                 <div>
-                                    <h6 class="mb-0">John Doe</h6>
-                                    <small class="">Founder, ABC Inc</small>
+                                    <h6 class="mb-0 fade-up">John Doe</h6>
+                                    <small class="fade-up">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text fade-up">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -938,13 +961,13 @@
                     <div class="swiper-slide">
                         <div class="testimonial-card">
                             <div class="testimonial-profile mb-2">
-                                <img src="./Assets/test.png" alt="User">
+                                <img src="./Assets/test.png" alt="User" class="fade-up">
                                 <div>
-                                    <h6 class="mb-0">John Doe</h6>
-                                    <small class="">Founder, ABC Inc</small>
+                                    <h6 class="mb-0 fade-up">John Doe</h6>
+                                    <small class="fade-up">Founder, ABC Inc</small>
                                 </div>
                             </div>
-                            <p class="testimonial-text">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
+                            <p class="testimonial-text fade-up">The process was smooth and professional. Highly recommend BuzyPros for startup services!</p>
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2">
                                     <img width="30" height="30" src="https://img.icons8.com/fluency/30/google-logo.png"
@@ -964,7 +987,7 @@
             
                 </div>
                 <div class="mt-5 text-center">
-                    <a href="" class="btn btn-primary px-4 py-2">
+                    <a href="" class="btn btn-primary px-4 py-2 fade-up">
                         View More Reviews
                     </a>
                 </div>
@@ -1054,10 +1077,10 @@
     <div class="sect-spacer bg-lightblue">
         <div class="container py-5">
             <div class="text-center">
-                <p class="card-head text-center">
+                <p class="card-head text-center fade-up">
                     Meet The Experts Behind BuzyPro
                 </p>
-                <p>
+                <p class="fade-up">
                     Our diverse team of accounting, legal, and compliance professionals are committed <br/>to
                     your business success.
                 </p>
@@ -1070,10 +1093,10 @@
                     <div class="swiper-slide">
                         <div class="card team-card p-2 border-0 h-100 rounded-4">
                             <div class="card-body">
-                                <img src="./Assets/profile/pro1.png" class="img-fluid w-100" alt="">
-                                <h5 class="member-name mt-3 mb-0">Rajesh Kumar</h5>
-                                <p class="member-title">Founder & CEO</p>
-                                <p class="member-bio mb-0">Chartered Accountant with 20+ years of experience in corporate
+                                <img src="./Assets/profile/pro1.png" class="img-fluid w-100 fade-up" alt="">
+                                <h5 class="member-name mt-3 mb-0 fade-up">Rajesh Kumar</h5>
+                                <p class="member-title fade-up">Founder & CEO</p>
+                                <p class="member-bio mb-0 fade-up">Chartered Accountant with 20+ years of experience in corporate
                                     compliance and taxation.
                                 </p>
                             </div>
@@ -1084,10 +1107,10 @@
                     <div class="swiper-slide">
                         <div class="card team-card p-2 border-0 h-100 rounded-4">
                             <div class="card-body">
-                                <img src="./Assets/profile/pro2.png" class="img-fluid w-100" alt="">
-                                <h5 class="member-name mt-3 mb-0">Priya Mehra</h5>
-                                <p class="member-title">COO</p>
-                                <p class="member-bio mb-0">Operations expert with a knack for streamlining business
+                                <img src="./Assets/profile/pro2.png" class="img-fluid w-100 fade-up" alt="">
+                                <h5 class="member-name mt-3 mb-0 fade-up">Priya Mehra</h5>
+                                <p class="member-title fade-up">COO</p>
+                                <p class="member-bio mb-0 fade-up">Operations expert with a knack for streamlining business
                                     workflows and scaling startups.</p>
                             </div>
                         </div>
@@ -1097,10 +1120,10 @@
                     <div class="swiper-slide">
                         <div class="card team-card p-2 border-0 h-100 rounded-4">
                             <div class="card-body">
-                                <img src="./Assets/profile/pro3.png" class="img-fluid w-100" alt="">
-                                <h5 class="member-name mt-3 mb-0">Amit Sharma</h5>
-                                <p class="member-title">Head of Marketing</p>
-                                <p class="member-bio mb-0">Creative strategist focused on digital campaigns and brand
+                                <img src="./Assets/profile/pro3.png" class="img-fluid w-100 fade-up" alt="">
+                                <h5 class="member-name mt-3 mb-0 fade-up">Amit Sharma</h5>
+                                <p class="member-title fade-up">Head of Marketing</p>
+                                <p class="member-bio mb-0 fade-up">Creative strategist focused on digital campaigns and brand
                                     awareness across multiple platforms.</p>
                             </div>
                         </div>
@@ -1110,10 +1133,10 @@
                     <div class="swiper-slide">
                         <div class="card team-card p-2 border-0 h-100 rounded-4">
                             <div class="card-body">
-                                <img src="./Assets/profile/pro4.png" class="img-fluid w-100" alt="">
-                                <h5 class="member-name mt-3 mb-0">Neha Kapoor</h5>
-                                <p class="member-title">CTO</p>
-                                <p class="member-bio mb-0">Technology lead with a deep understanding of scalable web
+                                <img src="./Assets/profile/pro4.png" class="img-fluid w-100 fade-up" alt="">
+                                <h5 class="member-name mt-3 mb-0 fade-up">Neha Kapoor</h5>
+                                <p class="member-title fade-up">CTO</p>
+                                <p class="member-bio mb-0 fade-up">Technology lead with a deep understanding of scalable web
                                     platforms and app development. Technology lead with a deep understanding of scalable web
                                     platforms and app development.</p>
                             </div>
@@ -1123,10 +1146,10 @@
                     <div class="swiper-slide">
                         <div class="card team-card p-2 border-0 h-100 rounded-4">
                             <div class="card-body">
-                                <img src="./Assets/profile/pro4.png" class="img-fluid w-100" alt="">
-                                <h5 class="member-name mt-3 mb-0">Neha Kapoor</h5>
-                                <p class="member-title">CTO</p>
-                                <p class="member-bio mb-0">Technology lead with a deep understanding of scalable web
+                                <img src="./Assets/profile/pro4.png" class="img-fluid w-100 fade-up" alt="">
+                                <h5 class="member-name mt-3 mb-0 fade-up">Neha Kapoor</h5>
+                                <p class="member-title fade-up">CTO</p>
+                                <p class="member-bio mb-0 fade-up">Technology lead with a deep understanding of scalable web
                                     platforms and app development.</p>
                             </div>
                         </div>
@@ -1218,10 +1241,10 @@
     <div class="sect-spacer">
         <div class="container py-5">
             <div class="text-center">
-                <p class="card-head">
+                <p class="card-head fade-up">
                     What Makes BuzyPro Different
                 </p>
-                <p>
+                <p class="fade-up">
                     Weve helped over 1000 businesses navigate complex compliance<br/>
                     requirements with ease and confidence
                 </p>
@@ -1229,34 +1252,34 @@
             <div class="row">
                 <div class="col-md-5 col-lg-5 col-12">
                     <div class="d-flex align-items-start gap-3 mb-4">
-                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounde fade-upd fade-up" style="max-width: 80px;">
                         <div>
-                            <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                            <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                            <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                            <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                 free.</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-start gap-3 mb-4">
-                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                         <div>
-                            <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                            <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                            <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                            <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                 free.</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-start gap-3 mb-4">
-                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                         <div>
-                            <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                            <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                            <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                            <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                 free.</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-start gap-3 mb-4">
-                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded" style="max-width: 80px;">
+                        <img src="./Assets/pro-img.png" alt="Compliance" class="img-fluid rounded fade-up" style="max-width: 80px;">
                         <div>
-                            <p class="fw-bold fs-5 mb-1">100% Compliance Guarantee</p>
-                            <p class="mb-0 small">We ensure your business meets all regulatory <br>requirements or we fix it for
+                            <p class="fw-bold fs-5 mb-1 fade-up">100% Compliance Guarantee</p>
+                            <p class="mb-0 small fade-up">We ensure your business meets all regulatory <br>requirements or we fix it for
                                 free.</p>
                         </div>
                     </div>
@@ -1264,7 +1287,7 @@
                 </div>
                 <div class="col-md-7 col-lg-7 col-12">
                     <div>
-                        <p class="fs-2 fw-bold text-center">
+                        <p class="fs-2 fw-bold text-center fade-up">
                             Our Approach Makes The Difference
                         </p>
                         <div class="bg-lightblue rounded-4">
@@ -1272,27 +1295,27 @@
                                 <div class="col-md-6">
                                    <div class="buzy-card">
                                         <div class="border-bottom border-light border-2 m-2">
-                                            <p class="fw-bold fs-4 mb-0">
+                                            <p class="fw-bold fs-4 mb-0 fade-up">
                                                 BuzyPro
                                             </p>
-                                            <p class="mb-2">
+                                            <p class="mb-2 fade-up">
                                                 What our clients get
                                             </p>                                   
                                         </div>
                                         <div>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-check-circle-fill text-success me-1"></i> Dedicated compliance expert.
                                             </p>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-check-circle-fill text-success me-1"></i> Transparent, upfront pricing.
                                             </p>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-check-circle-fill text-success me-1"></i> Digital document management.
                                             </p>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-check-circle-fill text-success me-1"></i> Real-time compliance updates.
                                             </p>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-check-circle-fill text-success me-1"></i> Proactive deadline management.</p>
                                         </div>
                                     </div>
@@ -1300,26 +1323,26 @@
                                 <div class="col-md-6 other">
                                     <div class="other-card h-100">
                                         <div class="border-bottom border-light-subtle border-2 m-2">
-                                            <p class="fw-bold fs-4 mb-0">
+                                            <p class="fw-bold fs-4 mb-0 fade-up">
                                                 Other
                                             </p>
-                                            <p class="mb-2">
+                                            <p class="mb-2 fade-up">
                                                 What you might get elsewhere
                                             </p>
                                         </div>
                                         <div>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-x-circle text-danger me-2"></i> Generic service with no personalization
                                             </p>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-x-circle text-danger me-2"></i>
                                                 Hidden fees and unexpected charges
                                             </p>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-x-circle text-danger me-2"></i>
                                                 Paper-based, inefficient processes
                                             </p>
-                                            <p class="mb-1">
+                                            <p class="mb-1 fade-up">
                                                 <i class="bi bi-x-circle text-danger me-2"></i>
                                                 Reactive approach to deadlines
                                             </p>
@@ -1338,17 +1361,17 @@
             <div class="row gy-4">
                 <!-- Company Info & Newsletter -->
                 <div class="col-lg-4 col-md-6 text-white">
-                    <h5 class="fw-bold fs-3">BuzyPro</h5>
-                    <p class="mb-2 fw-medium fs-5">Smart Support for Smart Businesses</p>
-                    <p class="">
+                    <h5 class="fw-bold fs-3 fade-up">BuzyPro</h5>
+                    <p class="mb-2 fw-medium fs-5 fade-up">Smart Support for Smart Businesses</p>
+                    <p class="fade-up">
                         From business incorporation to bookkeeping, BuzyPro provides unique services for startups &
                         enterprises. We bring together Government regulations and Entrepreneurs through technology.
                     </p>
-                    <h6 class="mt-4 fs-4 mb-2">Subscribe to Our Newsletter</h6>
-                    <p class="text-white">
+                    <h6 class="mt-4 fs-4 mb-2 fade-up">Subscribe to Our Newsletter</h6>
+                    <p class="text-white fade-up">
                         Get the latest updates, news and special offers
                     </p>
-                    <form class="d-flex flex-column flex-sm-row bg-white rounded-2 p-1">
+                    <form class="d-flex flex-column flex-sm-row bg-white rounded-2 p-1 fade-up">
                         <input type="email" class="form-control" placeholder="Enter your Email ID">
                         <button class="btn btn-primary">Send</button>
                     </form>
@@ -1356,77 +1379,77 @@
     
                 <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6">
-                    <h6 class="fw-bold fs-4 mb-3">BuzyPro</h6>
+                    <h6 class="fw-bold fs-4 mb-3 fade-up">BuzyPro</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">About
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">About
                                 BuzyPro</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Online
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Online
                                 Payment</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Blogs</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Careers</a>
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Blogs</a></li>
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Careers</a>
                         </li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">BuzyPro
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">BuzyPro
                                 Reviews</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Contact Us</a>
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Contact Us</a>
                         </li>
                     </ul>
                 </div>
     
                 <!-- Our Services -->
                 <div class="col-lg-3 col-md-6">
-                    <h6 class="fw-bold mb-3">Our Services</h6>
+                    <h6 class="fw-bold mb-3 fade-up">Our Services</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Company
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Company
                                 Registration</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">GST
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">GST
                                 Registration & Filing</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Income Tax
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Income Tax
                                 Filing</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Business
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Business
                                 Licenses</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Legal
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Legal
                                 Documentation</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Tax
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Tax
                                 Advisory</a></li>
-                        <li class="mb-3"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Business
+                        <li class="mb-3 fade-up"><a href="#" class="fs-6 fw-lighter text-white text-decoration-none">Business
                                 Advisory</a></li>
                     </ul>
                 </div>
     
                 <!-- Contact Info -->
                 <div class="col-lg-3 col-md-6">
-                    <h6 class="fw-bold mb-3">Contact Us</h6>
-                    <p class="text-white fs-6 fw-lighter mb-1">
+                    <h6 class="fw-bold mb-3 fade-up">Contact Us</h6>
+                    <p class="text-white fs-6 fw-lighter mb-1 fade-up">
                         <i class="bi bi-geo-alt-fill me-2 text-white lh-lg"></i>
                         No. 164/1, 2nd Floor, Pallavan Street,<br>Alwarthirunagar, Chennai 600 087, India
                     </p>
-                    <p class="text-white fs-6 fw-lighter mb-1 lh-lg">
+                    <p class="text-white fs-6 fw-lighter mb-1 lh-lg fade-up">
                         <i class="bi bi-telephone-fill me-2 text-white"></i> +91 98765 43210
                     </p>
-                    <p class="text-white fs-6 fw-lighter mb-1 lh-lg">
+                    <p class="text-white fs-6 fw-lighter mb-1 lh-lg fade-up">
                         <i class="bi bi-envelope-fill me-2 text-white"></i> info@buzypro.com
                     </p>
-                    <p class="text-white fs-6 fw-lighter lh-lg">
+                    <p class="text-white fs-6 fw-lighter lh-lg fade-up">
                         <i class="bi bi-clock-fill me-2 text-white"></i> Mon - Sat: 9:00 AM – 7:00 PM
                     </p>
                     <div class="d-flex gap-3">
                         <a href="#"
-                            class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
+                            class="fade-up d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
                             style="width: 35px; height: 35px;">
                             <i class="bi bi-linkedin"></i>
                         </a>
                         <a href="#"
-                            class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
+                            class="fade-up d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
                             style="width: 35px; height: 35px;">
                             <i class="bi bi-facebook"></i>
                         </a>
                         <a href="#"
-                            class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
+                            class="fade-up d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
                             style="width: 35px; height: 35px;">
                             <i class="bi bi-twitter"></i>
                         </a>
                         <a href="#"
-                            class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
+                            class="fade-up d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-primary"
                             style="width: 35px; height: 35px;">
                             <i class="bi bi-envelope-fill"></i>
                         </a>
@@ -1438,12 +1461,12 @@
             <div class="d-flex flex-column flex-md-row justify-content-between text-center text-md-start mt-lg-5 mt-3">
                 <p class="mb-0 text-white small">© 2025 BuzyPro. All Rights Reserved.</p>
                 <ul class="list-inline small mb-0">
-                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-none  fs-6 fw-lighter">Terms
+                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-none  fs-6 fw-lighter ">Terms
                             & Conditions</a>
                     </li>
-                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-none fs-6 fw-lighter">Privacy
+                    <li class=" list-inline-item"><a href="#" class="text-white text-decoration-none fs-6 fw-lighter ">Privacy
                             Policy</a></li>
-                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-none fs-6 fw-lighter">Refund
+                    <li class=" list-inline-item"><a href="#" class="text-white text-decoration-none fs-6 fw-lighter ">Refund
                             Policy</a></li>
                 </ul>
             </div>
